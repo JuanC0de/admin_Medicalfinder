@@ -253,15 +253,15 @@
     }
   }
 
-  const modal = ref(false)
-  const currentImageIndex = ref(0)
-  const images = ref([
-    'https://i.imgur.com/qSykGko.jpg',
-    'https://i.imgur.com/jYwT08D.png',
-    'https://i.imgur.com/9930myH.jpg',
-    'https://i.imgur.com/2JxhWD6.jpg',
-    'https://i.imgur.com/MpiOWbM.jpg',
-  ])
+  // const modal = ref(false)
+  // const currentImageIndex = ref(0)
+  // const images = ref([
+  //   'https://i.imgur.com/qSykGko.jpg',
+  //   'https://i.imgur.com/jYwT08D.png',
+  //   'https://i.imgur.com/9930myH.jpg',
+  //   'https://i.imgur.com/2JxhWD6.jpg',
+  //   'https://i.imgur.com/MpiOWbM.jpg',
+  // ])
   const pacienteInfo = ref(null)
   const idCitaSeleccionada = ref(0)
   const modalInferior = ref(false)

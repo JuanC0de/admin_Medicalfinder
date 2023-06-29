@@ -185,18 +185,18 @@
   import { nextTick } from 'vue'
   import store from '../../../stores/vuexStore'
   // import ServiceData from '../../../services/ServiceData'
-  import ServiceProfile from '../../../services/ServiceProfile'
+  // import ServiceProfile from '../../../services/ServiceProfile'
   import { onMounted } from 'vue'
 
   import type MediumEditor from 'medium-editor'
   import VaMediumEditor from '../../../components/va-medium-editor/VaMediumEditor.vue'
   const { t } = useI18n()
   const showMediumModal = ref(false)
-  let token = {
-    tipoPerfil: 'medico',
-  }
+  // let token = {
+  //   tipoPerfil: 'medico',
+  // }
   let perfil = store.state.User
-  let nombrePerfil = ref('')
+  // let nombrePerfil = ref('')
   const nombreUsuario = ref('')
   let telefonoMed = ref('')
   let numeroTarjetaMed = ref('')
@@ -261,6 +261,7 @@
     }
     console.log('Terminado la data', perfil)
   }
+
   onMounted(dataPerfil)
 </script>
 

@@ -24,9 +24,9 @@
 
   const dashboardMap = ref()
 
-  function addAddressToMap({ city, country }: { city: { text: string }; country: string }) {
-    dashboardMap.value.addAddress({ city: city.text, country })
-  }
+  // function addAddressToMap({ city, country }: { city: { text: string }; country: string }) {
+  //   dashboardMap.value.addAddress({ city: city.text, country })
+  // }
 </script>
 
 <style lang="scss">

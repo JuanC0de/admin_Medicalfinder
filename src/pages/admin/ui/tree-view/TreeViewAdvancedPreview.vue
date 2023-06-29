@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-template-shadow -->
 <template>
   <div class="tree-view-advanced-preview">
     <div class="tree-view-advanced-preview__buttons">

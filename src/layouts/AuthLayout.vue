@@ -31,12 +31,12 @@
 </template>
 
 <script>
-  import VuesticLogo from '../components/VuesticLogo.vue'
+  // import VuesticLogo from '../components/VuesticLogo.vue'
   import { useI18n } from 'vue-i18n'
 
   export default {
     name: 'AuthLayout',
-    components: { VuesticLogo },
+    components: {  },
     setup() {
       const { t } = useI18n()
       return { t }

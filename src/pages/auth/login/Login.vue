@@ -43,7 +43,7 @@
 
   const email = ref('')
   const password = ref('')
-  const keepLoggedIn = ref(false)
+  // const keepLoggedIn = ref(false)
   const emailErrors = ref<string[]>([])
   const passwordErrors = ref<string[]>([])
   const router = useRouter()
