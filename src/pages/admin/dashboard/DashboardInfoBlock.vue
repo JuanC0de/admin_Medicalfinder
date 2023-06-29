@@ -127,7 +127,9 @@
                     <va-badge :text="cita.Estados" :color="getStatusColor(cita.Estados)" />
                   </td>
                   <td>{{ cita.Tipodeconsulta }}</td>
-                  <td v-if="tipoPerfilUser"><va-button class="mr-2 mb-2" color="info" @click="showModal(cita)"> Paciente </va-button></td>
+                  <td v-if="tipoPerfilUser">
+                    <va-button class="mr-2 mb-2" color="info" @click="showModal(cita)"> Paciente </va-button>
+                  </td>
                   <td v-if="!tipoPerfilUser">
                     <va-button
                       class="mr-2 mb-2"
@@ -168,21 +170,21 @@
 
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { useI18n } from 'vue-i18n'
-  import { VaCarousel, VaModal, VaCard, VaCardContent, VaCardTitle, VaButton, VaImage, useColors } from 'vuestic-ui'
+  // import { useI18n } from 'vue-i18n'
+  import { VaModal, VaCard, VaCardContent, VaCardTitle, VaButton, useColors } from 'vuestic-ui'
   import { onMounted } from 'vue'
   import store from '../../../stores/vuexStore'
   import ServiceData from '../../../services/ServiceData'
   import ServiceProfile from '../../../services/ServiceProfile'
 
   const { colors } = useColors()
-  import data from '../../../data/tables/markup-table/data.json'
+  // import data from '../../../data/tables/markup-table/data.json'
 
-  const { t } = useI18n()
+  // const { t } = useI18n()
 
-  const users = ref(data.slice(0, 8))
+  // const users = ref(data.slice(0, 8))
   const infoPaciente = 'Información del Paciente'
-  const detallePaciente = 'Data:'
+  // const detallePaciente = 'Data:'
   const cerrarBoton = 'Cerrar'
   const citas = ref([])
   let lista = []
@@ -193,7 +195,7 @@
   let citasRealizadas = 0
   let citasCanceladas = 0
   let citasPendientes = 0
-  const showLargeModal = ref(false)
+  // const showLargeModal = ref(false)
 
   function getStatusColor(status: string) {
     if (status === 'Realizada') {

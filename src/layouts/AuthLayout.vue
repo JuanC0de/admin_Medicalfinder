@@ -3,7 +3,7 @@
     <div class="flex xs12 pa-3 justify-center">
       <router-link class="py-5 justify-center d-flex" to="/">
         <!-- <vuestic-logo height="32" /> -->
-        <img src="../assets/LogoMedicalfinder.png" alt="Logo" class="MedicalFinder">
+        <img src="../assets/LogoMedicalfinder.png" alt="Logo" class="MedicalFinder" />
       </router-link>
     </div>
 
@@ -69,7 +69,7 @@
       max-width: 600px;
     }
   }
-  .MedicalFinder{
+  .MedicalFinder {
     height: 150px;
   }
 </style>

@@ -86,14 +86,14 @@
       console.log('Pacientes', responsePacientes)
       console.log('responseMedicos', responseMedicos)
       if (responsePacientes.length > 0) {
-        store.commit('updateTokenAndUser', { token:response.token, user: responsePacientes })
+        store.commit('updateTokenAndUser', { token: response.token, user: responsePacientes })
       } else {
-        store.commit('updateTokenAndUser', { token:response.token, user: medicoQuemado })
+        store.commit('updateTokenAndUser', { token: response.token, user: medicoQuemado })
       }
       console.log('Este es el valor del store 2:', store.state.Token, '-', store.state.User)
       router.push({ name: 'dashboard' })
     } else {
-      errores.value = 'Credenciales incorrectas';
+      errores.value = 'Credenciales incorrectas'
       console.log('Ha ocurrido un error')
     }
   }

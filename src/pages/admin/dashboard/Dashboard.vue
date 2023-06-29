@@ -16,20 +16,17 @@
 <script setup lang="ts">
   import { ref } from 'vue'
 
-  import DashboardCharts from './DashboardCharts.vue'
+  // import DashboardCharts from './DashboardCharts.vue'
   import DashboardInfoBlock from './DashboardInfoBlock.vue'
-  import DashboardTabs from './DashboardTabs.vue'
-  import DashboardMap from './DashboardMap.vue'
-  import { onMounted } from 'vue'
-
+  // import DashboardTabs from './DashboardTabs.vue'
+  // import DashboardMap from './DashboardMap.vue'
+  // import { onMounted } from 'vue'
 
   const dashboardMap = ref()
 
   function addAddressToMap({ city, country }: { city: { text: string }; country: string }) {
     dashboardMap.value.addAddress({ city: city.text, country })
   }
-
-
 </script>
 
 <style lang="scss">

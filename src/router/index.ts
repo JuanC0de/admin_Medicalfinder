@@ -223,9 +223,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/adminDashboard',
     component: RouteViewComponent,
-    children: [
-     
-    ],
+    children: [],
   },
 ]
 

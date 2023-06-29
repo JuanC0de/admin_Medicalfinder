@@ -180,11 +180,11 @@
 
 <script setup lang="ts">
   import { ref } from 'vue'
-  import CountriesList from '../forms/data/CountriesList'
+  // import CountriesList from '../forms/data/CountriesList'
   import { useI18n } from 'vue-i18n'
   import { nextTick } from 'vue'
   import store from '../../../stores/vuexStore'
-  import ServiceData from '../../../services/ServiceData'
+  // import ServiceData from '../../../services/ServiceData'
   import ServiceProfile from '../../../services/ServiceProfile'
   import { onMounted } from 'vue'
 
@@ -203,14 +203,14 @@
   let cedulaMed = ref('')
   let correoMed = ref('')
   let tipoPerfilUser = ref(false)
-  let horaInicio = new Date()
-  let horaFinal = perfil.HoraFinal
-  let fechasDisponibilidad = perfil.FechasDisponibilidad
+  // let horaInicio = new Date()
+  // let horaFinal = perfil.HoraFinal
+  // let fechasDisponibilidad = perfil.FechasDisponibilidad
   let confirmSubmit = {
-    message:'¿Desea guardar cambios?',
-    confirm:'Confirmar',
-    cancel:'Cancelar',
-    title:'Actualizar Perfil'
+    message: '¿Desea guardar cambios?',
+    confirm: 'Confirmar',
+    cancel: 'Cancelar',
+    title: 'Actualizar Perfil',
   }
   let perfilProfesional = ref('')
   let ciudadSeleccionada = perfil.CiudadMed
@@ -251,46 +251,15 @@
       perfilProfesional.value = perfil.PerfilProfesional
     } else {
       nombreUsuario.value = perfil[0].NombreCompletoPac
-      console.log('Nombre:',nombreUsuario.value);
+      console.log('Nombre:', nombreUsuario.value)
       telefonoMed.value = perfil[0].telefonoPac
-      console.log('Telefono:',telefonoMed.value);
+      console.log('Telefono:', telefonoMed.value)
       correoMed.value = perfil[0].correoPac
-      console.log('Correo:',correoMed.value);
+      console.log('Correo:', correoMed.value)
       cedulaMed.value = perfil[0].cedulaPac
-      console.log('Cedula:',cedulaMed.value);
-
+      console.log('Cedula:', cedulaMed.value)
     }
     console.log('Terminado la data', perfil)
-  }
-  async function guardarCambios() {
-    if (token.tipoPerfil == 'medico') {
-      // nombrePerfil
-      // telefonoMed
-      // numeroTarjetaMed
-      // cedulaMed
-      // correoMed
-      // dateInput.multiple
-      // dateInput.simple
-      // dateInput.simple2
-      // ciudadSeleccionada
-      // especialidadSeleccionada
-      let descripcionProfesional = document.getElementById('textoPerfilProfesional')
-      console.log('ya entre a editar la data')
-      let actualizarPerfilMedico = await ServiceProfile.editarMedico(
-        nombrePerfil,
-        telefonoMed,
-        numeroTarjetaMed,
-        cedulaMed,
-        correoMed,
-        dateInput.value.multiple,
-        dateInput.value.simple,
-        dateInput.value.simple2,
-        descripcionProfesional.text,
-      )
-      console.log('Resultado del edit', actualizarPerfilMedico.json())
-    } else {
-      console.log('Hay un error mi estimado')
-    }
   }
   onMounted(dataPerfil)
 </script>

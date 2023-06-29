@@ -71,6 +71,8 @@ class ServiceProfile {
     HoraInicio,
     HoraFinal,
     PerfilProfesional,
+    CiudadMed,
+    Especialidad
   ) {
     let myHeaders = new Headers()
     myHeaders.append('Content-Type', 'application/json')

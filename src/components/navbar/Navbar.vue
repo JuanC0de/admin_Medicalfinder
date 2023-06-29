@@ -12,7 +12,6 @@
         <router-link to="/">
           <vuestic-logo class="logo" />
           <!-- <img src="@/assets/LogoMedicalfinder.png" alt="Logo" class="logoMedicalFinder"> -->
-
         </router-link>
       </div>
     </template>
@@ -62,19 +61,18 @@
   const GlobalStore = useGlobalStore()
   const { t } = useI18n()
 
-  const { isSidebarMinimized, userName } = storeToRefs(GlobalStore)
+  const { isSidebarMinimized } = storeToRefs(GlobalStore)
 
   const nameUser = ref('')
   const { getColors } = useColors()
   const colors = computed(() => getColors())
 
-  function nombreUsuario(){
+  function nombreUsuario() {
     let perfil = store.state.User
     let tipoPerfilUser = perfil.NumeroTarjetaMed != undefined ? true : false
-    if(tipoPerfilUser==true){
+    if (tipoPerfilUser == true) {
       nameUser.value = perfil.NombreCompletoMed
-    }
-    else{
+    } else {
       nameUser.value = perfil[0].NombreCompletoPac
     }
   }
